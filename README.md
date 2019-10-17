@@ -1,1 +1,1 @@
-# koa-vkminiapps
+# vkminiapps-sign
