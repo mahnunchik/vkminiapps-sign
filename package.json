@@ -1,6 +1,6 @@
 {
   "name": "vkminiapps-sign",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Module to verify signature in VK Mini Apps",
   "main": "vkminiapps-sign.js",
   "type": "module",
