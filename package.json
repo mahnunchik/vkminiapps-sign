@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Module to verify signature in VK Mini Apps",
   "main": "vkminiapps-sign.js",
+  "type": "module",
   "scripts": {
-    "test": "eslint *.js && jest"
+    "test": "mocha *.test.js",
+    "lint": "eslint *.js"
   },
   "repository": {
     "type": "git",
@@ -12,29 +14,45 @@
   },
   "keywords": [
     "vk",
+    "vkontakte",
     "vkminiapps",
     "vkapps",
     "sign",
     "signature"
   ],
-  "author": "Evgeny Vlasenko <mahnunchik@gmail.com>",
+  "author": "Evgeny Vlasenko <mahnunchik+vkminiapps@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mahnunchik/vkminiapps-sign/issues"
   },
   "homepage": "https://github.com/mahnunchik/vkminiapps-sign#readme",
   "devDependencies": {
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "jest": "^24.9.0"
+    "eslint": "^8.23.1",
+    "mocha": "^10.0.0"
+  },
+  "engines": {
+    "node": ">=16"
   },
   "eslintConfig": {
-    "extends": "airbnb-base",
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 2022,
+      "requireConfigFile": false,
+      "sourceType": "module"
+    },
     "env": {
       "es6": true,
-      "node": true,
-      "jest": true
-    }
+      "node": true
+    },
+    "overrides": [
+      {
+        "files": [
+          "*.test.js"
+        ],
+        "env": {
+          "mocha": true
+        }
+      }
+    ]
   }
 }
